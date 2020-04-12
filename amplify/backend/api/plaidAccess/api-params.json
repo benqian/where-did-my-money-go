@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/plaid/access",
+            "lambdaFunction": "plaidAccessLambda",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "plaidAccess",
+    "apiName": "plaidAccess",
+    "functionArns": [
+        {
+            "lambdaFunction": "plaidAccessLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "wheredidmymoneygo-dev-20190714142625-authRole",
+        "unAuthRoleName": "wheredidmymoneygo-dev-20190714142625-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "plaidAccessLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
